@@ -160,3 +160,18 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# 데이터 파일 (업로드 방지)
+data/*.csv
+data/*.json
+data/*.xlsx
+
+# Jupyter Notebook 실행 파일
+.ipynb_checkpoints/
+
+# Python 캐시 파일
+__pycache__/
+
+# 환경설정 파일 (개인 설정 보호)
+.env
+config.json
