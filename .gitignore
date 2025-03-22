@@ -175,3 +175,4 @@ __pycache__/
 # 환경설정 파일 (개인 설정 보호)
 .env
 config.json
+*.swp
