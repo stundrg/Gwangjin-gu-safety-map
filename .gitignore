@@ -162,10 +162,10 @@ cython_debug/
 #.idea/
 
 # 데이터 파일 (업로드 방지)
-data/*.csv
-data/*.json
-data/*.xlsx
-
+src/data/*.csv
+src/data/*.json
+src/data/*.xlsx
+src/data/**/*.csv
 # Jupyter Notebook 실행 파일
 .ipynb_checkpoints/
 
@@ -176,4 +176,8 @@ __pycache__/
 .env
 config.json
 *.swp
-src/data/**/*.csv
+
+# 데이터 파일 무시
+!data/.gitkeep
+
+
