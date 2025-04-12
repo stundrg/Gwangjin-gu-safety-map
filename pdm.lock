@@ -5,7 +5,7 @@
 groups = ["default", "dev", "docs", "seaborn", "test"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:70fb977d0bcc700c726a9545e6c5d5877561914999e270eb4f462130018ce007"
+content_hash = "sha256:4c8e769706af22643d28e8cac1e84f542858c86c2cceedaa6010e5aa9ec38ef3"
 
 [[metadata.targets]]
 requires_python = ">=3.10"
