@@ -166,6 +166,7 @@ src/data/*.csv
 src/data/*.json
 src/data/*.xlsx
 src/data/**/*.csv
+src/data/*.html
 # Jupyter Notebook 실행 파일
 .ipynb_checkpoints/
 
