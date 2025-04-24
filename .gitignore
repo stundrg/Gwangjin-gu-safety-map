@@ -180,4 +180,4 @@ config.json
 # 데이터 파일 무시
 !data/.gitkeep
 
-
+src/results/*.html
