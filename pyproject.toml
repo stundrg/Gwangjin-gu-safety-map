@@ -30,11 +30,11 @@ dev = [
     "folium>=0.19.5",
     "scikit-learn>=1.6.1",
     "numpy>=2.2.5",
-<<<<<<< HEAD
     "haversine>=2.9.0",
-=======
     "notebook>=7.4.1",
->>>>>>> 750fbe0a3e86be8b37edb23208f9a319e35c52ef
+    "fiona>=1.10.1",
+    "pyproj>=3.7.1",
+    "branca>=0.8.1",
 ]
 test = [
     "pytest>=8.3.5",
