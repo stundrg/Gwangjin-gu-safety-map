@@ -2,7 +2,7 @@
 # It is not intended for manual editing.
 
 [metadata]
-groups = ["default", "dev", "docs", "test"]
+groups = ["default", "dev", "docs", "notebook", "test"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
 content_hash = "sha256:ada980314aa33ec8d75529f957f4a116c8887d3a0bf36af680be77f21152f18f"
