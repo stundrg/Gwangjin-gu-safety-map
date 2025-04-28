@@ -2,10 +2,21 @@
 # It is not intended for manual editing.
 
 [metadata]
+<<<<<<< HEAD
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
+<<<<<<< HEAD
 content_hash = "sha256:0f3da489de336e114bbe927be8d9b2139cbce74552c6b61c0f47a91ed6137411"
+=======
+content_hash = "sha256:d081f29ee31f4c2396a02fb1bb1ae42440e6f018ed6b34fb767e0da635919441"
+=======
+groups = ["default", "dev", "docs", "notebook", "test"]
+strategy = ["inherit_metadata"]
+lock_version = "4.5.0"
+content_hash = "sha256:3a187c9377dacfb524aca6653e9dcebad13b8cc998569898bb95e18aede45450"
+>>>>>>> 750fbe0a3e86be8b37edb23208f9a319e35c52ef
+>>>>>>> 2b08a06be877c813f3f3069fa797bb206bab27da
 
 [[metadata.targets]]
 requires_python = ">=3.10"
@@ -1472,6 +1483,24 @@ groups = ["dev"]
 files = [
     {file = "nest_asyncio-1.6.0-py3-none-any.whl", hash = "sha256:87af6efd6b5e897c81050477ef65c62e2b2f35d51703cae01aff2905b1852e1c"},
     {file = "nest_asyncio-1.6.0.tar.gz", hash = "sha256:6f172d5449aca15afd6c646851f4e31e02c598d553a667e38cafa997cfec55fe"},
+]
+
+[[package]]
+name = "notebook"
+version = "7.4.1"
+requires_python = ">=3.8"
+summary = "Jupyter Notebook - A web-based notebook environment for interactive computing"
+groups = ["dev"]
+dependencies = [
+    "jupyter-server<3,>=2.4.0",
+    "jupyterlab-server<3,>=2.27.1",
+    "jupyterlab<4.5,>=4.4.0rc0",
+    "notebook-shim<0.3,>=0.2",
+    "tornado>=6.2.0",
+]
+files = [
+    {file = "notebook-7.4.1-py3-none-any.whl", hash = "sha256:498f12cf567d95b20e780d62d52564ee4310248b3175e996b667b5808028e5d3"},
+    {file = "notebook-7.4.1.tar.gz", hash = "sha256:96894962b230013ea0c0a466e4e642c5aace25ba8c86686175b69990ef628ff9"},
 ]
 
 [[package]]
