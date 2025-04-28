@@ -166,8 +166,6 @@ src/data/*.csv
 src/data/*.json
 src/data/*.xlsx
 src/data/**/*.csv
-# Jupyter Notebook 실행 파일
-.ipynb_checkpoints/
 
 # Python 캐시 파일
 __pycache__/
