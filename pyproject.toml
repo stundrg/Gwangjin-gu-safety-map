@@ -30,6 +30,7 @@ dev = [
     "folium>=0.19.5",
     "scikit-learn>=1.6.1",
     "numpy>=2.2.5",
+    "notebook>=7.4.1",
 ]
 test = [
     "pytest>=8.3.5",
