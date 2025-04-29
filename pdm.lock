@@ -2,17 +2,10 @@
 # It is not intended for manual editing.
 
 [metadata]
-<<<<<<< HEAD
-groups = ["default", "dev"]
-strategy = ["inherit_metadata"]
-lock_version = "4.5.0"
-content_hash = "sha256:d081f29ee31f4c2396a02fb1bb1ae42440e6f018ed6b34fb767e0da635919441"
-=======
 groups = ["default", "dev", "docs", "notebook", "test"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
 content_hash = "sha256:3a187c9377dacfb524aca6653e9dcebad13b8cc998569898bb95e18aede45450"
->>>>>>> 750fbe0a3e86be8b37edb23208f9a319e35c52ef
 
 [[metadata.targets]]
 requires_python = ">=3.10"
@@ -1923,6 +1916,17 @@ dependencies = [
 files = [
     {file = "python-dateutil-2.9.0.post0.tar.gz", hash = "sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"},
     {file = "python_dateutil-2.9.0.post0-py2.py3-none-any.whl", hash = "sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"},
+]
+
+[[package]]
+name = "python-dotenv"
+version = "1.1.0"
+requires_python = ">=3.9"
+summary = "Read key-value pairs from a .env file and set them as environment variables"
+groups = ["dev"]
+files = [
+    {file = "python_dotenv-1.1.0-py3-none-any.whl", hash = "sha256:d7c01d9e2293916c18baf562d95698754b0dbbb5e74d457c45d4f6561fb9d55d"},
+    {file = "python_dotenv-1.1.0.tar.gz", hash = "sha256:41f90bc6f5f177fb41f53e87666db362025010eb28f60a01c9143bfa33a2b2d5"},
 ]
 
 [[package]]
