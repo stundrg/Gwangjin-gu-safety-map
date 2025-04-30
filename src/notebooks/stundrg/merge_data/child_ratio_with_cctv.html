@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_92d636858e5e4168d3f6d51b99b2ba76 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style='position: fixed; bottom: 40px; left: 40px; width: 200px;
+            background:white; border:2px solid grey; z-index:9999;
+            font-size:14px; line-height:18px; padding:6px;'>
+<b>표시 규칙</b><br>
+<span style='color:red;'>●</span> CCTV 0대 (위험)<br>
+<span style='color:green;'>●</span> CCTV 1대 이상<br>
+원 크기 ↑ : 행정동 3~12세 어린이 비중 ↑
+</div>
+    
+            <div class="folium-map" id="map_92d636858e5e4168d3f6d51b99b2ba76" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_92d636858e5e4168d3f6d51b99b2ba76 = L.map(
+                "map_92d636858e5e4168d3f6d51b99b2ba76",
+                {
+                    center: [37.55, 127.08],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a25d81019a7ef525e17ef205942b3377 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a25d81019a7ef525e17ef205942b3377.addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+            var circle_marker_b7689f017f2b05319b60554563a3b12d = L.circleMarker(
+                [37.5498138606171, 127.086793350213],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_a168eb8d2dd51785decf36b24cca3c99 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6f152705ccfff49700518df6298de47d = $(`<div id="html_6f152705ccfff49700518df6298de47d" style="width: 100.0%; height: 100.0%;"><b>경복초등학교</b><br>행정동: 능동<br>어린이 비중: 4.0%<br>CCTV 50 m: 0대</div>`)[0];
+                popup_a168eb8d2dd51785decf36b24cca3c99.setContent(html_6f152705ccfff49700518df6298de47d);
+            
+        
+
+        circle_marker_b7689f017f2b05319b60554563a3b12d.bindPopup(popup_a168eb8d2dd51785decf36b24cca3c99)
+        ;
+
+        
+    
+    
+            var circle_marker_b3dfed92d42fcaf89999056008421243 = L.circleMarker(
+                [37.5409675314785, 127.100704228215],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_a933fd97b4c897fdb2d8d9cb556e73d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f65f3ba6b0b06f5addab35631839806e = $(`<div id="html_f65f3ba6b0b06f5addab35631839806e" style="width: 100.0%; height: 100.0%;"><b>서울광남초등학교</b><br>행정동: 광장동<br>어린이 비중: 11.0%<br>CCTV 50 m: 0대</div>`)[0];
+                popup_a933fd97b4c897fdb2d8d9cb556e73d0.setContent(html_f65f3ba6b0b06f5addab35631839806e);
+            
+        
+
+        circle_marker_b3dfed92d42fcaf89999056008421243.bindPopup(popup_a933fd97b4c897fdb2d8d9cb556e73d0)
+        ;
+
+        
+    
+    
+            var circle_marker_a589476e89633a17f688d4ab387ed8d6 = L.circleMarker(
+                [37.5485492186653, 127.101799885644],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_63c470a00c2bab101f8d71645aa0c5d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b1ed11d3f03900c76ac3147e431a6960 = $(`<div id="html_b1ed11d3f03900c76ac3147e431a6960" style="width: 100.0%; height: 100.0%;"><b>서울광장초등학교</b><br>행정동: 광장동<br>어린이 비중: 11.0%<br>CCTV 50 m: 2대</div>`)[0];
+                popup_63c470a00c2bab101f8d71645aa0c5d3.setContent(html_b1ed11d3f03900c76ac3147e431a6960);
+            
+        
+
+        circle_marker_a589476e89633a17f688d4ab387ed8d6.bindPopup(popup_63c470a00c2bab101f8d71645aa0c5d3)
+        ;
+
+        
+    
+    
+            var circle_marker_3e593c945e63669ebfd92fc7b5e1244a = L.circleMarker(
+                [37.5476114602117, 127.091332532375],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_92aaddad0c4de76b38452cc52fc59f62 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eba6f6a8f0fa9fb4397d592efc6c13fe = $(`<div id="html_eba6f6a8f0fa9fb4397d592efc6c13fe" style="width: 100.0%; height: 100.0%;"><b>서울광진초등학교</b><br>행정동: 구의2동<br>어린이 비중: 6.0%<br>CCTV 50 m: 2대</div>`)[0];
+                popup_92aaddad0c4de76b38452cc52fc59f62.setContent(html_eba6f6a8f0fa9fb4397d592efc6c13fe);
+            
+        
+
+        circle_marker_3e593c945e63669ebfd92fc7b5e1244a.bindPopup(popup_92aaddad0c4de76b38452cc52fc59f62)
+        ;
+
+        
+    
+    
+            var circle_marker_3a5c3ea8edef6bee0ab29be465fc0e2f = L.circleMarker(
+                [37.5370965949427, 127.092288798461],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_4b251008936c46402bf7598b33fa57b0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f1880dcde7e9ceaf42ad9ee5db33e9ba = $(`<div id="html_f1880dcde7e9ceaf42ad9ee5db33e9ba" style="width: 100.0%; height: 100.0%;"><b>서울구남초등학교</b><br>행정동: 구의3동<br>어린이 비중: 6.0%<br>CCTV 50 m: 0대</div>`)[0];
+                popup_4b251008936c46402bf7598b33fa57b0.setContent(html_f1880dcde7e9ceaf42ad9ee5db33e9ba);
+            
+        
+
+        circle_marker_3a5c3ea8edef6bee0ab29be465fc0e2f.bindPopup(popup_4b251008936c46402bf7598b33fa57b0)
+        ;
+
+        
+    
+    
+            var circle_marker_acbf5639b3bcd081d6544944e2e19714 = L.circleMarker(
+                [37.5430074366803, 127.08031177586],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_c895fbebd8e7f3f7b5f8ec1b97861ac4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b9c0a3e5b3957b496511b440340b1472 = $(`<div id="html_b9c0a3e5b3957b496511b440340b1472" style="width: 100.0%; height: 100.0%;"><b>서울구의초등학교</b><br>행정동: 화양동<br>어린이 비중: 1.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_c895fbebd8e7f3f7b5f8ec1b97861ac4.setContent(html_b9c0a3e5b3957b496511b440340b1472);
+            
+        
+
+        circle_marker_acbf5639b3bcd081d6544944e2e19714.bindPopup(popup_c895fbebd8e7f3f7b5f8ec1b97861ac4)
+        ;
+
+        
+    
+    
+            var circle_marker_ec72ae83ab8aab84fdc1d6a79a021219 = L.circleMarker(
+                [37.5534224448219, 127.099047310011],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_cc3be1afb7e63b4f261d3c46094866bb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7112f25a640e4666d5e5d840d8435bc9 = $(`<div id="html_7112f25a640e4666d5e5d840d8435bc9" style="width: 100.0%; height: 100.0%;"><b>서울동의초등학교</b><br>행정동: 구의2동<br>어린이 비중: 6.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_cc3be1afb7e63b4f261d3c46094866bb.setContent(html_7112f25a640e4666d5e5d840d8435bc9);
+            
+        
+
+        circle_marker_ec72ae83ab8aab84fdc1d6a79a021219.bindPopup(popup_cc3be1afb7e63b4f261d3c46094866bb)
+        ;
+
+        
+    
+    
+            var circle_marker_6efecd0d70d7c54d70617cc9eb9c1bdf = L.circleMarker(
+                [37.5350582094918, 127.072179165371],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_b201e5e5434b50cb077ed906aaa697b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_678a1274296ff0816bd5635bc9de9c8b = $(`<div id="html_678a1274296ff0816bd5635bc9de9c8b" style="width: 100.0%; height: 100.0%;"><b>서울동자초등학교</b><br>행정동: 자양3동<br>어린이 비중: 8.0%<br>CCTV 50 m: 0대</div>`)[0];
+                popup_b201e5e5434b50cb077ed906aaa697b2.setContent(html_678a1274296ff0816bd5635bc9de9c8b);
+            
+        
+
+        circle_marker_6efecd0d70d7c54d70617cc9eb9c1bdf.bindPopup(popup_b201e5e5434b50cb077ed906aaa697b2)
+        ;
+
+        
+    
+    
+            var circle_marker_c41e80d6004ebef4fe1ae1f7c0d97deb = L.circleMarker(
+                [37.531493571169, 127.083408323591],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_c0d66a26fe591b778393ac0b7c0e073e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d74f88122887473cfd91c79fc6fee6cc = $(`<div id="html_d74f88122887473cfd91c79fc6fee6cc" style="width: 100.0%; height: 100.0%;"><b>서울성자초등학교</b><br>행정동: 자양2동<br>어린이 비중: 5.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_c0d66a26fe591b778393ac0b7c0e073e.setContent(html_d74f88122887473cfd91c79fc6fee6cc);
+            
+        
+
+        circle_marker_c41e80d6004ebef4fe1ae1f7c0d97deb.bindPopup(popup_c0d66a26fe591b778393ac0b7c0e073e)
+        ;
+
+        
+    
+    
+            var circle_marker_40c6824f161ab7c4e439916b9d3f7caa = L.circleMarker(
+                [37.5346820949284, 127.0699952764],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_512677ed66f2747c0c4f265b223404c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_85a97d1518cb0cc572de9d354a5bfe97 = $(`<div id="html_85a97d1518cb0cc572de9d354a5bfe97" style="width: 100.0%; height: 100.0%;"><b>서울신양초등학교</b><br>행정동: 자양3동<br>어린이 비중: 8.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_512677ed66f2747c0c4f265b223404c2.setContent(html_85a97d1518cb0cc572de9d354a5bfe97);
+            
+        
+
+        circle_marker_40c6824f161ab7c4e439916b9d3f7caa.bindPopup(popup_512677ed66f2747c0c4f265b223404c2)
+        ;
+
+        
+    
+    
+            var circle_marker_746d620c6368915fe42faf027b5a0cc6 = L.circleMarker(
+                [37.5302454529249, 127.075587591515],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_5085bd48038cb5bd1b4c65c490749c11 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_56b717fccb1c0fef7b66a4f2ba310b94 = $(`<div id="html_56b717fccb1c0fef7b66a4f2ba310b94" style="width: 100.0%; height: 100.0%;"><b>서울신자초등학교</b><br>행정동: 자양2동<br>어린이 비중: 5.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_5085bd48038cb5bd1b4c65c490749c11.setContent(html_56b717fccb1c0fef7b66a4f2ba310b94);
+            
+        
+
+        circle_marker_746d620c6368915fe42faf027b5a0cc6.bindPopup(popup_5085bd48038cb5bd1b4c65c490749c11)
+        ;
+
+        
+    
+    
+            var circle_marker_d484d9a7e48cf7b38fd09bade438710d = L.circleMarker(
+                [37.5311232360546, 127.089234331023],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_7efc3c9f138f42e1902230c01ed8c7b7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6aa7c64a1d43c54f56d6d46eecb4fc74 = $(`<div id="html_6aa7c64a1d43c54f56d6d46eecb4fc74" style="width: 100.0%; height: 100.0%;"><b>서울양남초등학교</b><br>행정동: 자양2동<br>어린이 비중: 5.0%<br>CCTV 50 m: 0대</div>`)[0];
+                popup_7efc3c9f138f42e1902230c01ed8c7b7.setContent(html_6aa7c64a1d43c54f56d6d46eecb4fc74);
+            
+        
+
+        circle_marker_d484d9a7e48cf7b38fd09bade438710d.bindPopup(popup_7efc3c9f138f42e1902230c01ed8c7b7)
+        ;
+
+        
+    
+    
+            var circle_marker_eb50f11c4e7b586216b302f9d47bb2fc = L.circleMarker(
+                [37.5449782076528, 127.098714317037],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_726cee1ee440b4aacf811450a501a8ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44ba937fd40870e9ef305ad86edee2a1 = $(`<div id="html_44ba937fd40870e9ef305ad86edee2a1" style="width: 100.0%; height: 100.0%;"><b>서울양진초등학교</b><br>행정동: 광장동<br>어린이 비중: 11.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_726cee1ee440b4aacf811450a501a8ba.setContent(html_44ba937fd40870e9ef305ad86edee2a1);
+            
+        
+
+        circle_marker_eb50f11c4e7b586216b302f9d47bb2fc.bindPopup(popup_726cee1ee440b4aacf811450a501a8ba)
+        ;
+
+        
+    
+    
+            var circle_marker_5d57ee589a2103af3c58a07bde09b3e0 = L.circleMarker(
+                [37.5671086161443, 127.088452984118],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_93211c791b48ba696a3349baa86884e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a82898ca90b28fc3c41733c9aacea0a = $(`<div id="html_1a82898ca90b28fc3c41733c9aacea0a" style="width: 100.0%; height: 100.0%;"><b>서울용곡초등학교</b><br>행정동: 중곡4동<br>어린이 비중: 4.0%<br>CCTV 50 m: 4대</div>`)[0];
+                popup_93211c791b48ba696a3349baa86884e4.setContent(html_1a82898ca90b28fc3c41733c9aacea0a);
+            
+        
+
+        circle_marker_5d57ee589a2103af3c58a07bde09b3e0.bindPopup(popup_93211c791b48ba696a3349baa86884e4)
+        ;
+
+        
+    
+    
+            var circle_marker_da056f3cbde0232e1438ce54c9f55cad = L.circleMarker(
+                [37.5578273465317, 127.083527417056],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_7ecf30cda17335bb4b52017a96624423 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0176fdcc734baf85204294c21b2d7f33 = $(`<div id="html_0176fdcc734baf85204294c21b2d7f33" style="width: 100.0%; height: 100.0%;"><b>서울용마초등학교</b><br>행정동: 중곡2동<br>어린이 비중: 4.0%<br>CCTV 50 m: 2대</div>`)[0];
+                popup_7ecf30cda17335bb4b52017a96624423.setContent(html_0176fdcc734baf85204294c21b2d7f33);
+            
+        
+
+        circle_marker_da056f3cbde0232e1438ce54c9f55cad.bindPopup(popup_7ecf30cda17335bb4b52017a96624423)
+        ;
+
+        
+    
+    
+            var circle_marker_31c5576c220dee6f823c5f1a1cb9fac2 = L.circleMarker(
+                [37.5368378891148, 127.080107720459],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_69fea56c45d13d42549089da58d74d6e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6786c8c2e2f5ea785d14edac5e34b5d9 = $(`<div id="html_6786c8c2e2f5ea785d14edac5e34b5d9" style="width: 100.0%; height: 100.0%;"><b>서울자양초등학교</b><br>행정동: 자양1동<br>어린이 비중: 4.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_69fea56c45d13d42549089da58d74d6e.setContent(html_6786c8c2e2f5ea785d14edac5e34b5d9);
+            
+        
+
+        circle_marker_31c5576c220dee6f823c5f1a1cb9fac2.bindPopup(popup_69fea56c45d13d42549089da58d74d6e)
+        ;
+
+        
+    
+    
+            var circle_marker_4856949bdf145cd89923fea447d52855 = L.circleMarker(
+                [37.549876450253, 127.072402467919],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_434d5d7d15ad6ee6f554c42a4ed53cd9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_70c5a25110ce1e31d833c2ec4b87e801 = $(`<div id="html_70c5a25110ce1e31d833c2ec4b87e801" style="width: 100.0%; height: 100.0%;"><b>서울장안초등학교</b><br>행정동: 군자동<br>어린이 비중: 4.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_434d5d7d15ad6ee6f554c42a4ed53cd9.setContent(html_70c5a25110ce1e31d833c2ec4b87e801);
+            
+        
+
+        circle_marker_4856949bdf145cd89923fea447d52855.bindPopup(popup_434d5d7d15ad6ee6f554c42a4ed53cd9)
+        ;
+
+        
+    
+    
+            var circle_marker_8163a20fb01692cd20c8ef53b1a6e1fb = L.circleMarker(
+                [37.565172983593, 127.082512285004],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_35476e1817ed65a268e2c6abd5895b83 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fbefeeaf9f35d452c8cffbbc20a636f2 = $(`<div id="html_fbefeeaf9f35d452c8cffbbc20a636f2" style="width: 100.0%; height: 100.0%;"><b>서울중광초등학교</b><br>행정동: 중곡3동<br>어린이 비중: 4.0%<br>CCTV 50 m: 0대</div>`)[0];
+                popup_35476e1817ed65a268e2c6abd5895b83.setContent(html_fbefeeaf9f35d452c8cffbbc20a636f2);
+            
+        
+
+        circle_marker_8163a20fb01692cd20c8ef53b1a6e1fb.bindPopup(popup_35476e1817ed65a268e2c6abd5895b83)
+        ;
+
+        
+    
+    
+            var circle_marker_719eb5781d6ec84e87fc8570ef178004 = L.circleMarker(
+                [37.5661150659734, 127.080023721804],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_559fd244a9d99a647657fb34d67a14c0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7f2d6bd8dbb35c5a820fcc17a137ba3 = $(`<div id="html_c7f2d6bd8dbb35c5a820fcc17a137ba3" style="width: 100.0%; height: 100.0%;"><b>서울중마초등학교</b><br>행정동: 중곡3동<br>어린이 비중: 4.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_559fd244a9d99a647657fb34d67a14c0.setContent(html_c7f2d6bd8dbb35c5a820fcc17a137ba3);
+            
+        
+
+        circle_marker_719eb5781d6ec84e87fc8570ef178004.bindPopup(popup_559fd244a9d99a647657fb34d67a14c0)
+        ;
+
+        
+    
+    
+            var circle_marker_ff59bddf3d0b1ae1053da23aa6c17939 = L.circleMarker(
+                [37.5332813682573, 127.089281026795],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_bc4ff36457fb1e4142d3a65bf2b59fe8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d4d8b3fa4a8bd31660b2cd3cd1b6134e = $(`<div id="html_d4d8b3fa4a8bd31660b2cd3cd1b6134e" style="width: 100.0%; height: 100.0%;"><b>성동초등학교</b><br>행정동: 자양2동<br>어린이 비중: 5.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_bc4ff36457fb1e4142d3a65bf2b59fe8.setContent(html_d4d8b3fa4a8bd31660b2cd3cd1b6134e);
+            
+        
+
+        circle_marker_ff59bddf3d0b1ae1053da23aa6c17939.bindPopup(popup_bc4ff36457fb1e4142d3a65bf2b59fe8)
+        ;
+
+        
+    
+    
+            var circle_marker_c777650ca00b4bd33aeeffc7a47b580f = L.circleMarker(
+                [37.5530110986438, 127.072864629554],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_37018fb0728ecd4cabc5edd2733575fb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9f700fdacb19e98dcfbbf1976a3f6e67 = $(`<div id="html_9f700fdacb19e98dcfbbf1976a3f6e67" style="width: 100.0%; height: 100.0%;"><b>세종초등학교</b><br>행정동: 군자동<br>어린이 비중: 4.0%<br>CCTV 50 m: 2대</div>`)[0];
+                popup_37018fb0728ecd4cabc5edd2733575fb.setContent(html_9f700fdacb19e98dcfbbf1976a3f6e67);
+            
+        
+
+        circle_marker_c777650ca00b4bd33aeeffc7a47b580f.bindPopup(popup_37018fb0728ecd4cabc5edd2733575fb)
+        ;
+
+        
+    
+    
+            var circle_marker_c5ad7a7f086232a8c85b901f8d2203d3 = L.circleMarker(
+                [37.5416266176084, 127.100698325535],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_a9b3940bc94b9b5c929e87f37c7e9675 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a5380139211906cc6df683b1304f346f = $(`<div id="html_a5380139211906cc6df683b1304f346f" style="width: 100.0%; height: 100.0%;"><b>광남유치원</b><br>행정동: 광장동<br>어린이 비중: 11.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_a9b3940bc94b9b5c929e87f37c7e9675.setContent(html_a5380139211906cc6df683b1304f346f);
+            
+        
+
+        circle_marker_c5ad7a7f086232a8c85b901f8d2203d3.bindPopup(popup_a9b3940bc94b9b5c929e87f37c7e9675)
+        ;
+
+        
+    
+    
+            var circle_marker_4d87eddb9e3a93ae87663be7ab9e0b09 = L.circleMarker(
+                [37.5485408931781, 127.105232896252],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_bcb3688bbb12731cfe84e04a08f093ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8db4f2c8f589ee213a657ab7767b031b = $(`<div id="html_8db4f2c8f589ee213a657ab7767b031b" style="width: 100.0%; height: 100.0%;"><b>광장유치원</b><br>행정동: 광장동<br>어린이 비중: 11.0%<br>CCTV 50 m: 3대</div>`)[0];
+                popup_bcb3688bbb12731cfe84e04a08f093ec.setContent(html_8db4f2c8f589ee213a657ab7767b031b);
+            
+        
+
+        circle_marker_4d87eddb9e3a93ae87663be7ab9e0b09.bindPopup(popup_bcb3688bbb12731cfe84e04a08f093ec)
+        ;
+
+        
+    
+    
+            var circle_marker_e6272ad325aa66feb0af465392f3045a = L.circleMarker(
+                [37.5345768836952, 127.075652041243],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_5690d8f2a07558865ec3d73af80f6000 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f2e2687c01afab7c18fe5fd60ea17fbc = $(`<div id="html_f2e2687c01afab7c18fe5fd60ea17fbc" style="width: 100.0%; height: 100.0%;"><b>대원유치원 (구 우성유치원)</b><br>행정동: 자양3동<br>어린이 비중: 8.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_5690d8f2a07558865ec3d73af80f6000.setContent(html_f2e2687c01afab7c18fe5fd60ea17fbc);
+            
+        
+
+        circle_marker_e6272ad325aa66feb0af465392f3045a.bindPopup(popup_5690d8f2a07558865ec3d73af80f6000)
+        ;
+
+        
+    
+    
+            var circle_marker_67a2158df4067dc77afdbfeb63f60d73 = L.circleMarker(
+                [37.5517127888261, 127.072672678034],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_7cc544a51ee6ee99e6c28f71180d1392 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f1da8c68e63cf091b2f1396137c66cc = $(`<div id="html_1f1da8c68e63cf091b2f1396137c66cc" style="width: 100.0%; height: 100.0%;"><b>동심유치원</b><br>행정동: 군자동<br>어린이 비중: 4.0%<br>CCTV 50 m: 0대</div>`)[0];
+                popup_7cc544a51ee6ee99e6c28f71180d1392.setContent(html_1f1da8c68e63cf091b2f1396137c66cc);
+            
+        
+
+        circle_marker_67a2158df4067dc77afdbfeb63f60d73.bindPopup(popup_7cc544a51ee6ee99e6c28f71180d1392)
+        ;
+
+        
+    
+    
+            var circle_marker_9f03a058489cc3cb008dadd591a84e49 = L.circleMarker(
+                [37.5436567301031, 127.104250290998],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_818fe4a0f3f60b5f4a072483df1a60c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_19481dcffb1dbb06eb82cf0ce72c7abf = $(`<div id="html_19481dcffb1dbb06eb82cf0ce72c7abf" style="width: 100.0%; height: 100.0%;"><b>보성유치원</b><br>행정동: 광장동<br>어린이 비중: 11.0%<br>CCTV 50 m: 0대</div>`)[0];
+                popup_818fe4a0f3f60b5f4a072483df1a60c6.setContent(html_19481dcffb1dbb06eb82cf0ce72c7abf);
+            
+        
+
+        circle_marker_9f03a058489cc3cb008dadd591a84e49.bindPopup(popup_818fe4a0f3f60b5f4a072483df1a60c6)
+        ;
+
+        
+    
+    
+            var circle_marker_c35912243bb30c35f08577c2570270ca = L.circleMarker(
+                [37.5333960439046, 127.089785089027],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_00d946c37eb9ba268f68b7d29f7e3730 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5df6aa60fe3df0898c1d616a613e372e = $(`<div id="html_5df6aa60fe3df0898c1d616a613e372e" style="width: 100.0%; height: 100.0%;"><b>선경유치원</b><br>행정동: 자양2동<br>어린이 비중: 5.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_00d946c37eb9ba268f68b7d29f7e3730.setContent(html_5df6aa60fe3df0898c1d616a613e372e);
+            
+        
+
+        circle_marker_c35912243bb30c35f08577c2570270ca.bindPopup(popup_00d946c37eb9ba268f68b7d29f7e3730)
+        ;
+
+        
+    
+    
+            var circle_marker_032aeaae09ca0a89fc4c743ed264819c = L.circleMarker(
+                [37.5541431793711, 127.071278503381],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_cfbbc3400ba35b05137ac099bf7f43fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_15dc114165cbada1cbd808d8801e07db = $(`<div id="html_15dc114165cbada1cbd808d8801e07db" style="width: 100.0%; height: 100.0%;"><b>선양유치원</b><br>행정동: 군자동<br>어린이 비중: 4.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_cfbbc3400ba35b05137ac099bf7f43fc.setContent(html_15dc114165cbada1cbd808d8801e07db);
+            
+        
+
+        circle_marker_032aeaae09ca0a89fc4c743ed264819c.bindPopup(popup_cfbbc3400ba35b05137ac099bf7f43fc)
+        ;
+
+        
+    
+    
+            var circle_marker_e3eaa95611e024b00a76870d26d5ccd0 = L.circleMarker(
+                [37.5498138606171, 127.086793350213],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_df34d0067636e30d27f2596e7b1118d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ca7495f5242be39e66c9661a7830c0b0 = $(`<div id="html_ca7495f5242be39e66c9661a7830c0b0" style="width: 100.0%; height: 100.0%;"><b>선화유치원</b><br>행정동: 구의2동<br>어린이 비중: 6.0%<br>CCTV 50 m: 0대</div>`)[0];
+                popup_df34d0067636e30d27f2596e7b1118d2.setContent(html_ca7495f5242be39e66c9661a7830c0b0);
+            
+        
+
+        circle_marker_e3eaa95611e024b00a76870d26d5ccd0.bindPopup(popup_df34d0067636e30d27f2596e7b1118d2)
+        ;
+
+        
+    
+    
+            var circle_marker_d1e58775df55e621dd9bdaeda4897d79 = L.circleMarker(
+                [37.5329087681794, 127.084177549484],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_5f31d0878534efc8ec345569c759eff3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_95a1a372d3fc0263c7280e168d8a9449 = $(`<div id="html_95a1a372d3fc0263c7280e168d8a9449" style="width: 100.0%; height: 100.0%;"><b>성산유치원</b><br>행정동: 자양1동<br>어린이 비중: 4.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_5f31d0878534efc8ec345569c759eff3.setContent(html_95a1a372d3fc0263c7280e168d8a9449);
+            
+        
+
+        circle_marker_d1e58775df55e621dd9bdaeda4897d79.bindPopup(popup_5f31d0878534efc8ec345569c759eff3)
+        ;
+
+        
+    
+    
+            var circle_marker_27e25a23ce42b00f41552aaba7042917 = L.circleMarker(
+                [37.5520558380171, 127.092574431221],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_27e6a91f1aa86cf640d2e9b1917e4cd8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f9793219f7730b6d21debd70fde8939 = $(`<div id="html_0f9793219f7730b6d21debd70fde8939" style="width: 100.0%; height: 100.0%;"><b>슬기유치원</b><br>행정동: 구의2동<br>어린이 비중: 6.0%<br>CCTV 50 m: 0대</div>`)[0];
+                popup_27e6a91f1aa86cf640d2e9b1917e4cd8.setContent(html_0f9793219f7730b6d21debd70fde8939);
+            
+        
+
+        circle_marker_27e25a23ce42b00f41552aaba7042917.bindPopup(popup_27e6a91f1aa86cf640d2e9b1917e4cd8)
+        ;
+
+        
+    
+    
+            var circle_marker_7681f43d4f7f63b88d0134ad71d9300b = L.circleMarker(
+                [37.5472457327354, 127.078304321398],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_81ff2333519080366cd85bc05c364922 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec2b9b786aa76da00637fde7d62aa3d0 = $(`<div id="html_ec2b9b786aa76da00637fde7d62aa3d0" style="width: 100.0%; height: 100.0%;"><b>어린이회관유치원</b><br>행정동: 능동<br>어린이 비중: 4.0%<br>CCTV 50 m: 0대</div>`)[0];
+                popup_81ff2333519080366cd85bc05c364922.setContent(html_ec2b9b786aa76da00637fde7d62aa3d0);
+            
+        
+
+        circle_marker_7681f43d4f7f63b88d0134ad71d9300b.bindPopup(popup_81ff2333519080366cd85bc05c364922)
+        ;
+
+        
+    
+    
+            var circle_marker_f1b2adec6f48e9fd4794afd6509c06eb = L.circleMarker(
+                [37.5540529884568, 127.097719061855],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_7ce855d3277fcfb4d505ef3d41a5b840 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e4aa5c2333cae022c9ee9dbe42ea2331 = $(`<div id="html_e4aa5c2333cae022c9ee9dbe42ea2331" style="width: 100.0%; height: 100.0%;"><b>영화유치원</b><br>행정동: 구의2동<br>어린이 비중: 6.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_7ce855d3277fcfb4d505ef3d41a5b840.setContent(html_e4aa5c2333cae022c9ee9dbe42ea2331);
+            
+        
+
+        circle_marker_f1b2adec6f48e9fd4794afd6509c06eb.bindPopup(popup_7ce855d3277fcfb4d505ef3d41a5b840)
+        ;
+
+        
+    
+    
+            var circle_marker_3470eb22ebc41633836bf7fd5e2c7606 = L.circleMarker(
+                [37.533843780784, 127.068342525785],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_e5000d44a2d1df663b6c7d070ce532bb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d8dd874a1bf931543ed3bd6915115312 = $(`<div id="html_d8dd874a1bf931543ed3bd6915115312" style="width: 100.0%; height: 100.0%;"><b>인애유치원</b><br>행정동: 자양3동<br>어린이 비중: 8.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_e5000d44a2d1df663b6c7d070ce532bb.setContent(html_d8dd874a1bf931543ed3bd6915115312);
+            
+        
+
+        circle_marker_3470eb22ebc41633836bf7fd5e2c7606.bindPopup(popup_e5000d44a2d1df663b6c7d070ce532bb)
+        ;
+
+        
+    
+    
+            var circle_marker_00bd40962ba48e13a3e1dd500f88f899 = L.circleMarker(
+                [37.5431620967232, 127.095608314148],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_8e6663339c9def14ae9bbeb758933e78 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c9645a5a18a574799c1c74c3640fba4 = $(`<div id="html_3c9645a5a18a574799c1c74c3640fba4" style="width: 100.0%; height: 100.0%;"><b>청구이화유치원</b><br>행정동: 광장동<br>어린이 비중: 11.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_8e6663339c9def14ae9bbeb758933e78.setContent(html_3c9645a5a18a574799c1c74c3640fba4);
+            
+        
+
+        circle_marker_00bd40962ba48e13a3e1dd500f88f899.bindPopup(popup_8e6663339c9def14ae9bbeb758933e78)
+        ;
+
+        
+    
+    
+            var circle_marker_2f3b32660bfb02d0aa5bd08341e92eb2 = L.circleMarker(
+                [37.5387800804493, 127.098357196735],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_7b59c45a2dfa7bfef61cfe0d7d23bd8d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5f38266c8e6f3a76ae3d9bfe2104e26 = $(`<div id="html_d5f38266c8e6f3a76ae3d9bfe2104e26" style="width: 100.0%; height: 100.0%;"><b>프라임유치원</b><br>행정동: 구의3동<br>어린이 비중: 6.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_7b59c45a2dfa7bfef61cfe0d7d23bd8d.setContent(html_d5f38266c8e6f3a76ae3d9bfe2104e26);
+            
+        
+
+        circle_marker_2f3b32660bfb02d0aa5bd08341e92eb2.bindPopup(popup_7b59c45a2dfa7bfef61cfe0d7d23bd8d)
+        ;
+
+        
+    
+    
+            var circle_marker_bf8a145a2af4526826f969f163f987d1 = L.circleMarker(
+                [37.5351721266039, 127.071536511547],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_6b5dc2e26e815cb0b0bb194d385a2145 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c97eb100a1c162ee6ba9ca3fca2c790d = $(`<div id="html_c97eb100a1c162ee6ba9ca3fca2c790d" style="width: 100.0%; height: 100.0%;"><b>한일유치원</b><br>행정동: 자양3동<br>어린이 비중: 8.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_6b5dc2e26e815cb0b0bb194d385a2145.setContent(html_c97eb100a1c162ee6ba9ca3fca2c790d);
+            
+        
+
+        circle_marker_bf8a145a2af4526826f969f163f987d1.bindPopup(popup_6b5dc2e26e815cb0b0bb194d385a2145)
+        ;
+
+        
+    
+    
+            var circle_marker_e9302d95632ba9192a240b3829a5e31b = L.circleMarker(
+                [37.5430074366803, 127.08031177586],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_e0661490adc707d762243a14a7e2810a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_48d3b7501c419cf0155c50f3fbc457ce = $(`<div id="html_48d3b7501c419cf0155c50f3fbc457ce" style="width: 100.0%; height: 100.0%;"><b>서울구의초등학교병설유치원</b><br>행정동: 화양동<br>어린이 비중: 1.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_e0661490adc707d762243a14a7e2810a.setContent(html_48d3b7501c419cf0155c50f3fbc457ce);
+            
+        
+
+        circle_marker_e9302d95632ba9192a240b3829a5e31b.bindPopup(popup_e0661490adc707d762243a14a7e2810a)
+        ;
+
+        
+    
+    
+            var circle_marker_4333dd37acde365392e5356274f4f3c0 = L.circleMarker(
+                [37.5302454529249, 127.075587591515],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_e9f9b529a00a8bfe2e7360742528be51 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3f612c266a7eb68c4646a4988d8e95ad = $(`<div id="html_3f612c266a7eb68c4646a4988d8e95ad" style="width: 100.0%; height: 100.0%;"><b>서울신자초등학교병설유치원</b><br>행정동: 자양2동<br>어린이 비중: 5.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_e9f9b529a00a8bfe2e7360742528be51.setContent(html_3f612c266a7eb68c4646a4988d8e95ad);
+            
+        
+
+        circle_marker_4333dd37acde365392e5356274f4f3c0.bindPopup(popup_e9f9b529a00a8bfe2e7360742528be51)
+        ;
+
+        
+    
+    
+            var circle_marker_b7b4edbdd2d7f5bdd0584b958c08d7e1 = L.circleMarker(
+                [37.5311232360546, 127.089234331023],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_a3cd316192e88993bc88dcaa6a5e0205 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2add24ac8fe786a43bbc7559637b001c = $(`<div id="html_2add24ac8fe786a43bbc7559637b001c" style="width: 100.0%; height: 100.0%;"><b>서울양남초등학교병설유치원</b><br>행정동: 자양2동<br>어린이 비중: 5.0%<br>CCTV 50 m: 0대</div>`)[0];
+                popup_a3cd316192e88993bc88dcaa6a5e0205.setContent(html_2add24ac8fe786a43bbc7559637b001c);
+            
+        
+
+        circle_marker_b7b4edbdd2d7f5bdd0584b958c08d7e1.bindPopup(popup_a3cd316192e88993bc88dcaa6a5e0205)
+        ;
+
+        
+    
+    
+            var circle_marker_fdb6466f6cabef5177830c8058ec1777 = L.circleMarker(
+                [37.5449782076528, 127.098714317037],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_1a4e90e26af5879f2fd3c7bdd804fa3c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4d4e3c2ae4d5fb350fe6ba977efe562e = $(`<div id="html_4d4e3c2ae4d5fb350fe6ba977efe562e" style="width: 100.0%; height: 100.0%;"><b>서울양진초등학교병설유치원</b><br>행정동: 광장동<br>어린이 비중: 11.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_1a4e90e26af5879f2fd3c7bdd804fa3c.setContent(html_4d4e3c2ae4d5fb350fe6ba977efe562e);
+            
+        
+
+        circle_marker_fdb6466f6cabef5177830c8058ec1777.bindPopup(popup_1a4e90e26af5879f2fd3c7bdd804fa3c)
+        ;
+
+        
+    
+    
+            var circle_marker_80c48919463a7a37131a1861cdbb6d24 = L.circleMarker(
+                [37.5368378891148, 127.080107720459],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_0198140a1726bc5f95b9ffbbd6c815f4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41cbb5a2809122f2dae7303f4023a476 = $(`<div id="html_41cbb5a2809122f2dae7303f4023a476" style="width: 100.0%; height: 100.0%;"><b>서울자양초등학교병설유치원</b><br>행정동: 자양1동<br>어린이 비중: 4.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_0198140a1726bc5f95b9ffbbd6c815f4.setContent(html_41cbb5a2809122f2dae7303f4023a476);
+            
+        
+
+        circle_marker_80c48919463a7a37131a1861cdbb6d24.bindPopup(popup_0198140a1726bc5f95b9ffbbd6c815f4)
+        ;
+
+        
+    
+    
+            var circle_marker_f7cddb691639e2faa069409be82f0bba = L.circleMarker(
+                [37.565172983593, 127.082512285004],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_4c1c60db927d49da192657aaf0483c8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_279f727f4cdc8d7da4322041f436281e = $(`<div id="html_279f727f4cdc8d7da4322041f436281e" style="width: 100.0%; height: 100.0%;"><b>서울중광초등학교병설유치원</b><br>행정동: 중곡3동<br>어린이 비중: 4.0%<br>CCTV 50 m: 0대</div>`)[0];
+                popup_4c1c60db927d49da192657aaf0483c8e.setContent(html_279f727f4cdc8d7da4322041f436281e);
+            
+        
+
+        circle_marker_f7cddb691639e2faa069409be82f0bba.bindPopup(popup_4c1c60db927d49da192657aaf0483c8e)
+        ;
+
+        
+    
+    
+            var circle_marker_b167e1380941c9453e4d40180d00078a = L.circleMarker(
+                [37.5438489057381, 127.083775924735],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_9241dc6b4055079c053ab99fc22c23a7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5089bdebdbc47e2f5fa5fac4cae26e49 = $(`<div id="html_5089bdebdbc47e2f5fa5fac4cae26e49" style="width: 100.0%; height: 100.0%;"><b>구립 구의1동 아이터어린이집</b><br>행정동: 구의1동<br>어린이 비중: 4.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_9241dc6b4055079c053ab99fc22c23a7.setContent(html_5089bdebdbc47e2f5fa5fac4cae26e49);
+            
+        
+
+        circle_marker_b167e1380941c9453e4d40180d00078a.bindPopup(popup_9241dc6b4055079c053ab99fc22c23a7)
+        ;
+
+        
+    
+    
+            var circle_marker_96363d7946d483f682ad7b7bcdce755c = L.circleMarker(
+                [37.550210631264, 127.09624662957],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_3ffac9a4afb577c0005e0494d15d18f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e92f349db81162094924c5d89abf89e = $(`<div id="html_1e92f349db81162094924c5d89abf89e" style="width: 100.0%; height: 100.0%;"><b>구립 구의2동어린이집</b><br>행정동: 구의2동<br>어린이 비중: 6.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_3ffac9a4afb577c0005e0494d15d18f7.setContent(html_1e92f349db81162094924c5d89abf89e);
+            
+        
+
+        circle_marker_96363d7946d483f682ad7b7bcdce755c.bindPopup(popup_3ffac9a4afb577c0005e0494d15d18f7)
+        ;
+
+        
+    
+    
+            var circle_marker_cffb26e3c76a35b4de6c41ade81226dc = L.circleMarker(
+                [37.5393480224812, 127.095116450776],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_90ec259b0a718a16827e793e8b10892a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_425039eedd8129c5d3ac0f96732b7794 = $(`<div id="html_425039eedd8129c5d3ac0f96732b7794" style="width: 100.0%; height: 100.0%;"><b>구립 구의3동어린이집</b><br>행정동: 구의3동<br>어린이 비중: 6.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_90ec259b0a718a16827e793e8b10892a.setContent(html_425039eedd8129c5d3ac0f96732b7794);
+            
+        
+
+        circle_marker_cffb26e3c76a35b4de6c41ade81226dc.bindPopup(popup_90ec259b0a718a16827e793e8b10892a)
+        ;
+
+        
+    
+    
+            var circle_marker_f4e9e2063963ccb109adaf8d51d574f2 = L.circleMarker(
+                [37.5528109999944, 127.085972953024],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_eefe5445fe37ed44875f38695cf3e84a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_59a92120549cbd12fe594ccf74a16e87 = $(`<div id="html_59a92120549cbd12fe594ccf74a16e87" style="width: 100.0%; height: 100.0%;"><b>구립 능동 꿈맞이어린이집</b><br>행정동: 능동<br>어린이 비중: 4.0%<br>CCTV 50 m: 3대</div>`)[0];
+                popup_eefe5445fe37ed44875f38695cf3e84a.setContent(html_59a92120549cbd12fe594ccf74a16e87);
+            
+        
+
+        circle_marker_f4e9e2063963ccb109adaf8d51d574f2.bindPopup(popup_eefe5445fe37ed44875f38695cf3e84a)
+        ;
+
+        
+    
+    
+            var circle_marker_1a4a174a9b546c05fc8b45eee18e83ec = L.circleMarker(
+                [37.5535737499433, 127.081967593734],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_069f54347aee04d9a5e8943d193174bb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b63be9bab2a0ba940810ed8c8389520 = $(`<div id="html_0b63be9bab2a0ba940810ed8c8389520" style="width: 100.0%; height: 100.0%;"><b>구립 능동어린이집</b><br>행정동: 능동<br>어린이 비중: 4.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_069f54347aee04d9a5e8943d193174bb.setContent(html_0b63be9bab2a0ba940810ed8c8389520);
+            
+        
+
+        circle_marker_1a4a174a9b546c05fc8b45eee18e83ec.bindPopup(popup_069f54347aee04d9a5e8943d193174bb)
+        ;
+
+        
+    
+    
+            var circle_marker_7097b2a1c2e705b8f022a262f8fdf602 = L.circleMarker(
+                [37.5537605998899, 127.080552145109],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_73c55d13f06936119793e36dfa4d9716 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d6d04b1d454584640f3fcc0f52b8f772 = $(`<div id="html_d6d04b1d454584640f3fcc0f52b8f772" style="width: 100.0%; height: 100.0%;"><b>구립 능동주민센터어린이집</b><br>행정동: 능동<br>어린이 비중: 4.0%<br>CCTV 50 m: 2대</div>`)[0];
+                popup_73c55d13f06936119793e36dfa4d9716.setContent(html_d6d04b1d454584640f3fcc0f52b8f772);
+            
+        
+
+        circle_marker_7097b2a1c2e705b8f022a262f8fdf602.bindPopup(popup_73c55d13f06936119793e36dfa4d9716)
+        ;
+
+        
+    
+    
+            var circle_marker_6cba63893c8087241ab078c68ed4a581 = L.circleMarker(
+                [37.5400821497417, 127.086330147018],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_23cb3138c61e6714dab99f97ccded386 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ee93c8c5c007ba58fa15404c0b9f24f6 = $(`<div id="html_ee93c8c5c007ba58fa15404c0b9f24f6" style="width: 100.0%; height: 100.0%;"><b>구립 명성어린이집</b><br>행정동: 구의1동<br>어린이 비중: 4.0%<br>CCTV 50 m: 2대</div>`)[0];
+                popup_23cb3138c61e6714dab99f97ccded386.setContent(html_ee93c8c5c007ba58fa15404c0b9f24f6);
+            
+        
+
+        circle_marker_6cba63893c8087241ab078c68ed4a581.bindPopup(popup_23cb3138c61e6714dab99f97ccded386)
+        ;
+
+        
+    
+    
+            var circle_marker_f31bfa81cb6eeac6b0f06161f3d87a3b = L.circleMarker(
+                [37.5410628474256, 127.097057481335],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_fbd976c40db44806353eacabcb6039f4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0485af27185e53624d6b21caa1dbba6 = $(`<div id="html_c0485af27185e53624d6b21caa1dbba6" style="width: 100.0%; height: 100.0%;"><b>구립 사랑의어린이집</b><br>행정동: 광장동<br>어린이 비중: 11.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_fbd976c40db44806353eacabcb6039f4.setContent(html_c0485af27185e53624d6b21caa1dbba6);
+            
+        
+
+        circle_marker_f31bfa81cb6eeac6b0f06161f3d87a3b.bindPopup(popup_fbd976c40db44806353eacabcb6039f4)
+        ;
+
+        
+    
+    
+            var circle_marker_a26dbb7053f1a07873e17fc83e33c0d5 = L.circleMarker(
+                [37.5699309088453, 127.081419313257],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_30378147b2328abe9135bb266c1a25ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_887d01e2c0706fb8af99d1d3f57b1dd2 = $(`<div id="html_887d01e2c0706fb8af99d1d3f57b1dd2" style="width: 100.0%; height: 100.0%;"><b>구립 상명어린이집</b><br>행정동: 중곡3동<br>어린이 비중: 4.0%<br>CCTV 50 m: 3대</div>`)[0];
+                popup_30378147b2328abe9135bb266c1a25ba.setContent(html_887d01e2c0706fb8af99d1d3f57b1dd2);
+            
+        
+
+        circle_marker_a26dbb7053f1a07873e17fc83e33c0d5.bindPopup(popup_30378147b2328abe9135bb266c1a25ba)
+        ;
+
+        
+    
+    
+            var circle_marker_3421d46ee80f24f648e2298f73511640 = L.circleMarker(
+                [37.5565936459655, 127.084993694175],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_71988ec9df1192e4ed4506a838386589 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_59a952eb0fe09a5215d6e16f2fcda28e = $(`<div id="html_59a952eb0fe09a5215d6e16f2fcda28e" style="width: 100.0%; height: 100.0%;"><b>구립 성심어린이집</b><br>행정동: 중곡2동<br>어린이 비중: 4.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_71988ec9df1192e4ed4506a838386589.setContent(html_59a952eb0fe09a5215d6e16f2fcda28e);
+            
+        
+
+        circle_marker_3421d46ee80f24f648e2298f73511640.bindPopup(popup_71988ec9df1192e4ed4506a838386589)
+        ;
+
+        
+    
+    
+            var circle_marker_1ce3f6eeaaecdb5a258365dc6d19218a = L.circleMarker(
+                [37.5401682353446, 127.09084075373],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_f4e8532fda6da74a9ade1ee541f353a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2f527c3e27cee90503d5853dc37c4692 = $(`<div id="html_2f527c3e27cee90503d5853dc37c4692" style="width: 100.0%; height: 100.0%;"><b>구립 우리아이어린이집</b><br>행정동: 구의3동<br>어린이 비중: 6.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_f4e8532fda6da74a9ade1ee541f353a5.setContent(html_2f527c3e27cee90503d5853dc37c4692);
+            
+        
+
+        circle_marker_1ce3f6eeaaecdb5a258365dc6d19218a.bindPopup(popup_f4e8532fda6da74a9ade1ee541f353a5)
+        ;
+
+        
+    
+    
+            var circle_marker_e011a37dab7fd51007916a5732dc3d28 = L.circleMarker(
+                [37.5361946066945, 127.079927811875],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_6a6a74837965e2bd0c8a8472f8e77ed4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec005b88d58036307708fc1441c478df = $(`<div id="html_ec005b88d58036307708fc1441c478df" style="width: 100.0%; height: 100.0%;"><b>구립 자양도담어린이집</b><br>행정동: 자양1동<br>어린이 비중: 4.0%<br>CCTV 50 m: 3대</div>`)[0];
+                popup_6a6a74837965e2bd0c8a8472f8e77ed4.setContent(html_ec005b88d58036307708fc1441c478df);
+            
+        
+
+        circle_marker_e011a37dab7fd51007916a5732dc3d28.bindPopup(popup_6a6a74837965e2bd0c8a8472f8e77ed4)
+        ;
+
+        
+    
+    
+            var circle_marker_3377a9c9fd6b4e2924c3799c56b738b4 = L.circleMarker(
+                [37.5328984063505, 127.07523365394],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_ede833be748fcdbaeae21e1aff4007da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b1e3bdca4dfd76977edfafa555a561cc = $(`<div id="html_b1e3bdca4dfd76977edfafa555a561cc" style="width: 100.0%; height: 100.0%;"><b>구립 자양어린이집</b><br>행정동: 자양3동<br>어린이 비중: 8.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_ede833be748fcdbaeae21e1aff4007da.setContent(html_b1e3bdca4dfd76977edfafa555a561cc);
+            
+        
+
+        circle_marker_3377a9c9fd6b4e2924c3799c56b738b4.bindPopup(popup_ede833be748fcdbaeae21e1aff4007da)
+        ;
+
+        
+    
+    
+            var circle_marker_f4872743027fca3f235c8de5c4507783 = L.circleMarker(
+                [37.5709562228221, 127.080262086609],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_31cd32d12890184b969e1084b08cbc59 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb2c02630fc28b85f0e16089ebc30fdb = $(`<div id="html_bb2c02630fc28b85f0e16089ebc30fdb" style="width: 100.0%; height: 100.0%;"><b>구립 중곡샛별어린이집</b><br>행정동: 구의3동<br>어린이 비중: 6.0%<br>CCTV 50 m: 2대</div>`)[0];
+                popup_31cd32d12890184b969e1084b08cbc59.setContent(html_bb2c02630fc28b85f0e16089ebc30fdb);
+            
+        
+
+        circle_marker_f4872743027fca3f235c8de5c4507783.bindPopup(popup_31cd32d12890184b969e1084b08cbc59)
+        ;
+
+        
+    
+    
+            var circle_marker_1561ea439e9e03e74c86c185ed155ec3 = L.circleMarker(
+                [37.5558199225998, 127.076064866482],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_5990b2c33af330fe9195ec59e18131e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6598c2c2364e4497caec8f617cf9b36c = $(`<div id="html_6598c2c2364e4497caec8f617cf9b36c" style="width: 100.0%; height: 100.0%;"><b>꿈동산어린이집</b><br>행정동: 군자동<br>어린이 비중: 4.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_5990b2c33af330fe9195ec59e18131e4.setContent(html_6598c2c2364e4497caec8f617cf9b36c);
+            
+        
+
+        circle_marker_1561ea439e9e03e74c86c185ed155ec3.bindPopup(popup_5990b2c33af330fe9195ec59e18131e4)
+        ;
+
+        
+    
+    
+            var circle_marker_d8fc543549989add0106676a1d1531bc = L.circleMarker(
+                [37.5413474726287, 127.088695464545],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_d66d66d12c1a5f3faf3f7a2fb4316d51 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f5d16619df0bdad887eb77f38b88e1df = $(`<div id="html_f5d16619df0bdad887eb77f38b88e1df" style="width: 100.0%; height: 100.0%;"><b>신나는어린이집</b><br>행정동: 구의1동<br>어린이 비중: 4.0%<br>CCTV 50 m: 3대</div>`)[0];
+                popup_d66d66d12c1a5f3faf3f7a2fb4316d51.setContent(html_f5d16619df0bdad887eb77f38b88e1df);
+            
+        
+
+        circle_marker_d8fc543549989add0106676a1d1531bc.bindPopup(popup_d66d66d12c1a5f3faf3f7a2fb4316d51)
+        ;
+
+        
+    
+    
+            var circle_marker_8afa376b8fdb6974b1ab8809b50781db = L.circleMarker(
+                [37.5490937255137, 127.069448137472],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_bc2f0b745faf131f9a411f6a12612874 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_490ff12cd75ea3e42292ea4737838232 = $(`<div id="html_490ff12cd75ea3e42292ea4737838232" style="width: 100.0%; height: 100.0%;"><b>예지어린이집</b><br>행정동: 군자동<br>어린이 비중: 4.0%<br>CCTV 50 m: 2대</div>`)[0];
+                popup_bc2f0b745faf131f9a411f6a12612874.setContent(html_490ff12cd75ea3e42292ea4737838232);
+            
+        
+
+        circle_marker_8afa376b8fdb6974b1ab8809b50781db.bindPopup(popup_bc2f0b745faf131f9a411f6a12612874)
+        ;
+
+        
+    
+    
+            var circle_marker_5690259c63a9d2b82885db60d4413084 = L.circleMarker(
+                [37.5307969949455, 127.071174370251],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_1f4015187a809e8ef72716ad8d27983a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a43846cf8d98726ca051c7e556ae35e2 = $(`<div id="html_a43846cf8d98726ca051c7e556ae35e2" style="width: 100.0%; height: 100.0%;"><b>으뜸어린이집</b><br>행정동: 자양3동<br>어린이 비중: 8.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_1f4015187a809e8ef72716ad8d27983a.setContent(html_a43846cf8d98726ca051c7e556ae35e2);
+            
+        
+
+        circle_marker_5690259c63a9d2b82885db60d4413084.bindPopup(popup_1f4015187a809e8ef72716ad8d27983a)
+        ;
+
+        
+    
+    
+            var circle_marker_b73520c65a3aec8d5f100fd1949b87b9 = L.circleMarker(
+                [37.5362037856064, 127.090318309656],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_dd6f66928e0c2eda6e62d5069be0893b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e08b1794ce51bf5bcd1414c888eb0a99 = $(`<div id="html_e08b1794ce51bf5bcd1414c888eb0a99" style="width: 100.0%; height: 100.0%;"><b>좋은어린이집</b><br>행정동: 구의3동<br>어린이 비중: 6.0%<br>CCTV 50 m: 2대</div>`)[0];
+                popup_dd6f66928e0c2eda6e62d5069be0893b.setContent(html_e08b1794ce51bf5bcd1414c888eb0a99);
+            
+        
+
+        circle_marker_b73520c65a3aec8d5f100fd1949b87b9.bindPopup(popup_dd6f66928e0c2eda6e62d5069be0893b)
+        ;
+
+        
+    
+    
+            var circle_marker_6181e308ee33424e5590f7a164685647 = L.circleMarker(
+                [37.5527352595283, 127.096317777637],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_24e9f0a79e59607dae0bc7ab074483dd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd1b9d5cf0c98505f1a66f36b7b5f6f2 = $(`<div id="html_dd1b9d5cf0c98505f1a66f36b7b5f6f2" style="width: 100.0%; height: 100.0%;"><b>즐거운산들어린이집</b><br>행정동: 구의2동<br>어린이 비중: 6.0%<br>CCTV 50 m: 0대</div>`)[0];
+                popup_24e9f0a79e59607dae0bc7ab074483dd.setContent(html_dd1b9d5cf0c98505f1a66f36b7b5f6f2);
+            
+        
+
+        circle_marker_6181e308ee33424e5590f7a164685647.bindPopup(popup_24e9f0a79e59607dae0bc7ab074483dd)
+        ;
+
+        
+    
+    
+            var circle_marker_621db2d34be9357bda07acb36ca67be0 = L.circleMarker(
+                [37.5376674941402, 127.091561517825],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_e14c1fce8e737e60b2ad5fab22504e95 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed64533182ab7395f0c90f87dfb802e2 = $(`<div id="html_ed64533182ab7395f0c90f87dfb802e2" style="width: 100.0%; height: 100.0%;"><b>서울광진학교</b><br>행정동: 구의3동<br>어린이 비중: 6.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_e14c1fce8e737e60b2ad5fab22504e95.setContent(html_ed64533182ab7395f0c90f87dfb802e2);
+            
+        
+
+        circle_marker_621db2d34be9357bda07acb36ca67be0.bindPopup(popup_e14c1fce8e737e60b2ad5fab22504e95)
+        ;
+
+        
+    
+    
+            var circle_marker_77e4095b26a1bf65ae4bb0a0c4fbf7cb = L.circleMarker(
+                [37.5455494153327, 127.098204726073],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_255b9c1d2281be2abe0ae34e1de3c8e9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5f76cf7b27b1e3085e005a8e14dcaef = $(`<div id="html_d5f76cf7b27b1e3085e005a8e14dcaef" style="width: 100.0%; height: 100.0%;"><b>재한몽골학교</b><br>행정동: 광장동<br>어린이 비중: 11.0%<br>CCTV 50 m: 1대</div>`)[0];
+                popup_255b9c1d2281be2abe0ae34e1de3c8e9.setContent(html_d5f76cf7b27b1e3085e005a8e14dcaef);
+            
+        
+
+        circle_marker_77e4095b26a1bf65ae4bb0a0c4fbf7cb.bindPopup(popup_255b9c1d2281be2abe0ae34e1de3c8e9)
+        ;
+
+        
+    
+    
+            var circle_marker_f393965bc1b467897a6752057beb4c2d = L.circleMarker(
+                [37.5470884246412, 127.086432715531],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(map_92d636858e5e4168d3f6d51b99b2ba76);
+        
+    
+        var popup_737b808b547e8dcfa3631c431cd44749 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a1b9136dfbf64be4b0d9daeac5a78fc = $(`<div id="html_7a1b9136dfbf64be4b0d9daeac5a78fc" style="width: 100.0%; height: 100.0%;"><b>한국켄트외국인학교</b><br>행정동: 구의2동<br>어린이 비중: 6.0%<br>CCTV 50 m: 0대</div>`)[0];
+                popup_737b808b547e8dcfa3631c431cd44749.setContent(html_7a1b9136dfbf64be4b0d9daeac5a78fc);
+            
+        
+
+        circle_marker_f393965bc1b467897a6752057beb4c2d.bindPopup(popup_737b808b547e8dcfa3631c431cd44749)
+        ;
+
+        
+    
+</script>
+</html>
