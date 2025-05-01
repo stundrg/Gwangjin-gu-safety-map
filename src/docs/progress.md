@@ -11,6 +11,7 @@
 | gwangjin_child_zone_with_coords_filtered.csv| 완료 | 0.3.0/data_hyun |
 | proceeded_cctv.csv | 완료 | 0.3.0/data_hyun |
 
+
 ## 📌 heejin131 진행 현황
 
 | 파일명 | 상태 | 브랜치 |
