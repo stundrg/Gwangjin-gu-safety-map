@@ -5,7 +5,7 @@ description = "Default template for PDM package"
 authors = [
     {name = "stundrg", email = "khr0106@naver.com"},
 ]
-dependencies = ["pandas>=2.2.3", "geopy>=2.4.1", "fiona>=1.10.1"]
+dependencies = ["pandas>=2.2.3", "fiona>=1.10.1", "geopandas>=1.0.1"]
 requires-python = ">=3.10"
 readme = "README.md"
 license = {text = "MIT"}
