@@ -179,3 +179,14 @@ config.json
 !data/.gitkeep
 
 src/results/*.html
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+
