@@ -9,6 +9,7 @@
 ## 진행 현황
 
 - 최신 분석 진행 상황은 [진행상황](./src/docs/progress.md) 에서 확인할 수 있습니다.
+- 분석한 데이터와 산출물은 [Google Drive](https://drive.google.com/drive/folders/1t41kv9clGk9z6wL-iAlTC1Sx7RrJ8Oio?hl=ko) 에서 확인할 수 있습니다.
 
 ## 안전지도 구성 요소
 - 각 위험지도는 해당 계층을 중심으로, 공간 정보 + 사회 인프라 정보를 종합해 분석합니다.
