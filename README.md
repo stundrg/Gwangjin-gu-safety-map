@@ -77,9 +77,7 @@
  │   ├── notebooks/          # Jupyter Notebook (EDA, 분석)
  │   ├── references/         # 참고 논문 및 자료
  │   ├── results/            # 분석 결과 저장 (시각화, CSV 등)
- │   ├── scripts/            # 데이터 처리 및 실행 코드
- └── tests/                  # 테스트 코드 (별도 테스트용)
-     ├── __init__.py
+ └── ├── scripts/            # 데이터 처리 및 실행 코드
  ```
 
 ---
